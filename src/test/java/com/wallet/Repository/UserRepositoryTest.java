@@ -20,7 +20,7 @@ import com.wallet.Entity.User;
 //Configuração dos Testes TDD
 @RunWith(SpringRunner.class)
 @SpringBootTest
-
+@ActiveProfiles("test")
 public class UserRepositoryTest {
 
 	private static final String EMAIL = "Teste@Teste.com.br";
