@@ -1,5 +1,6 @@
 package com.wallet.controller;
 
+import static org.springframework.test.web.client.match.MockRestRequestMatchers.headerDoesNotExist;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
@@ -52,7 +53,7 @@ public class UserControllerTest {
 				.andExpect(jsonPath("$.data.Id").value(ID))
 				.andExpect(jsonPath("$.data.email").value(EMAIL))
 				.andExpect(jsonPath("$.data.name").value(NAME))
-				.andExpect(jsonPath("$.data.password").value(PASSWORD));
+				.andExpect(jsonPath("$.data.password").doesNotExist());
 	}
 	
 	@Test
