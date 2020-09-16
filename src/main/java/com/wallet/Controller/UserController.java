@@ -39,7 +39,7 @@ public class UserController {
 		
 		return ResponseEntity.status(HttpStatus.CREATED).body(response);
 	}
-	
+	//O que será gravado no Banco de Dados
 	private User convertDtoToEntity(UserDTO dto) {
 		User u = new User();
 		u.setId(dto.getId());
@@ -49,7 +49,7 @@ public class UserController {
 		
 		return u;
 	}
-	
+	//O que será mostrado na interface do usuário após o cadastro
 	private UserDTO convertEntityToDto(User u) {
 		UserDTO dto = new UserDTO();
 		dto.setId(u.getId());
