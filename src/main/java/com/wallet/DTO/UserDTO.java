@@ -7,7 +7,10 @@ import org.hibernate.validator.constraints.Length;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 
+import lombok.Data;
+
 @JsonInclude(JsonInclude.Include.NON_NULL)
+@Data
 public class UserDTO {
 	
 	private long Id;
@@ -43,4 +46,5 @@ public class UserDTO {
 		this.password = password;
 	}
 
+	
 }

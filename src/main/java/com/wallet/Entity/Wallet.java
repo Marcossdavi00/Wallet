@@ -60,6 +60,8 @@ public class Wallet implements Serializable {
 		return serialVersionUID;
 	}
 
+
+
 	
 	
 }
